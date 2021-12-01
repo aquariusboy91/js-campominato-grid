@@ -54,15 +54,47 @@ while (i < 49) {
 }
 console.log (array_49);
 
+//aggiungo event listener al bottone play per visualizzare il playfield
 document.querySelector(".btn-play").addEventListener("click", function() {
     playfield.classList.add("active");
+    let select = document.getElementById("difficolta");
+    let valore_select = select.value;
+    console.log(valore_select);
+    if(valore_select == "Easy") {
+        for(i = 0; i < 100; i++) {
+            let square_div = document.createElement('div');
+            square_div.classList.add("square-100");
+            playfield.append(square_div);
+            square_div.innerHTML = array_100[i];
+        }
+    } else if (valore_select == "Medium") {
+        for(i = 0; i < 81; i++) {
+            let square_div = document.createElement('div');
+            square_div.classList.add("square-81");
+            playfield.append(square_div);
+            square_div.innerHTML = array_81[i];
+        }
+
+    } else if (valore_select == "Hard") {
+        for(i = 0; i < 49; i++) {
+            let square_div = document.createElement('div');
+            square_div.classList.add("square-49");
+            playfield.append(square_div);
+            square_div.innerHTML = array_49[i];
+        }
+    }
   });
+   
+
 
 //ciclo for che crea div da inserire in playflied
-//inserisce un numero da 1 a 100 in ogni div
-for(i = 0; i < 100; i++) {
-    let square_div = document.createElement('div');
-    square_div.classList.add("square-100");
-    playfield.append(square_div);
-    square_div.innerHTML = array_100[i];
-}
+// inserisce un numero da 1 a 100 in ogni div
+//   if(valore == "Easy") {
+//     for(i = 0; i < 100; i++) {
+//         let square_div = document.createElement('div');
+//         square_div.classList.add("square-100");
+//         playfield.append(square_div);
+//         square_div.innerHTML = array_100[i];
+//             }
+//   }
+
