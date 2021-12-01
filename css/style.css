@@ -57,4 +57,9 @@ header {
     border: 1px solid black;
     width: 10%;
     height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
 }
