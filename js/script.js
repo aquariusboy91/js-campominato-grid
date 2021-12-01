@@ -54,7 +54,9 @@ while (i < 49) {
 }
 console.log (array_49);
 
-
+document.querySelector(".btn-play").addEventListener("click", function() {
+    playfield.classList.add("active");
+  });
 
 //ciclo for che crea div da inserire in playflied
 //inserisce un numero da 1 a 100 in ogni div
