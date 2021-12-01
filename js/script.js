@@ -66,6 +66,9 @@ document.querySelector(".btn-play").addEventListener("click", function() {
             square_div.classList.add("square-100");
             playfield.append(square_div);
             square_div.innerHTML = array_100[i];
+            square_div.addEventListener("click", function () {
+                square_div.classList.add("b-yellow");
+            });
         }
     } else if (valore_select == "Medium") {
         for(i = 0; i < 81; i++) {
@@ -73,6 +76,9 @@ document.querySelector(".btn-play").addEventListener("click", function() {
             square_div.classList.add("square-81");
             playfield.append(square_div);
             square_div.innerHTML = array_81[i];
+            square_div.addEventListener("click", function () {
+                square_div.classList.add("b-yellow");
+            });
         }
 
     } else if (valore_select == "Hard") {
@@ -81,20 +87,11 @@ document.querySelector(".btn-play").addEventListener("click", function() {
             square_div.classList.add("square-49");
             playfield.append(square_div);
             square_div.innerHTML = array_49[i];
+            square_div.addEventListener("click", function () {
+                square_div.classList.add("b-yellow");
+            });
         }
     }
   });
    
-
-
-//ciclo for che crea div da inserire in playflied
-// inserisce un numero da 1 a 100 in ogni div
-//   if(valore == "Easy") {
-//     for(i = 0; i < 100; i++) {
-//         let square_div = document.createElement('div');
-//         square_div.classList.add("square-100");
-//         playfield.append(square_div);
-//         square_div.innerHTML = array_100[i];
-//             }
-//   }
 
