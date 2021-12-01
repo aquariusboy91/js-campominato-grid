@@ -55,10 +55,12 @@ while (i < 49) {
 console.log (array_49);
 
 //aggiungo event listener al bottone play per visualizzare il playfield
+//ciclo for all'interno che crea div e numeri in base alle difficoltà
 document.querySelector(".btn-play").addEventListener("click", function() {
     playfield.classList.add("active");
     let select = document.getElementById("difficolta");
     let valore_select = select.value;
+    playfield.innerHTML = "";
     console.log(valore_select);
     if(valore_select == "Easy") {
         for(i = 0; i < 100; i++) {
